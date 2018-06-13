@@ -80,9 +80,27 @@ jobs:
    steps:
      - IN: c7service_ciRepo        
      - IN: c7-alltest
+     
+ - name: c7_ccp_test_runCI
+   type: runCI 
+   steps:
+     - IN: c7_ccp_test_ciRepo 
+     - IN: c7service_runCI     
+    
+ - name: c7_java_test_runCI
+   type: runCI
+   steps:
+     - IN: c7_java_test_ciRepo 
+     - IN: c7service_runCI
 
  - name: c7pytall_test2_runCI
    type: runCI
    steps:
      - IN: c7pytall_test2_ciRepo 
+     - IN: c7service_runCI
+     
+ - name: c7_node_test_runCI
+   type: runCI
+   steps:
+     - IN: c7_node_test_ciRepo
      - IN: c7service_runCI
