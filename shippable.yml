@@ -95,7 +95,7 @@ jobs:
    type: runCI
    steps:
      - IN: c7all_memcached_test_ciRepo 
-     - IN: c7all-test
+     - IN: c7alltest
  - name: c7all_riak_test_runCI
    type: runCI
    steps:
