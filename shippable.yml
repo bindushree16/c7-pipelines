@@ -1,5 +1,5 @@
 jobs:
- - name: c7testcase
+ - name: c7-pipelines
    type: runSh
    steps:
      - TASK:
@@ -66,10 +66,10 @@ jobs:
            - pip show pyopenssl          
            
 
- - name: c7all-test
+ - name: c7-alltest
    type: runSh
    steps:
-     - IN: c7_base-test
+     - IN: c7-pipelines
      - TASK:
          runtime:
            options:
@@ -80,17 +80,17 @@ jobs:
    type: runCI 
    steps:
      - IN: c7all_cuchdb_test_ciRepo 
-     - IN: c7all-test
+     - IN: c7-alltest
  - name: c7all_cssand_test_runCI
    type: runCI
    steps:
      - IN: c7all_cssand_test_ciRepo
-     - IN: c7all-test
+     - IN: c7-alltest
  - name: c7all_elasticsearch_test_runCI
    type: runCI
    steps:
      - IN: c7all_elasticsearch_test_ciRepo  
-     - IN: c7all-test
+     - IN: c7-alltest
  - name: c7all_memcached_test_runCI
    type: runCI
    steps:
@@ -100,7 +100,7 @@ jobs:
    type: runCI
    steps:
      - IN: c7all_riak_test_ciRepo 
-     - IN: c7all-test
+     - IN: c7-alltest
      
      
      
