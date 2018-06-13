@@ -66,7 +66,7 @@ jobs:
            - pip show pyopenssl          
            
 
- - name: c7-alltest
+ - name: c7-alltest     
    type: runSh
    steps:
      - IN: c7-pipelines
@@ -76,39 +76,15 @@ jobs:
              imageName: "drydock/c7all"
              imageTag: master
          script:      
- - name: c7all_cuchdb_test_runCI
-   type: runCI 
-   steps:
-     - IN: c7all_cuchdb_test_ciRepo 
-     - IN: c7-alltest
- - name: c7all_cssand_test_runCI
+  - name: c7service_runCI
    type: runCI
    steps:
-     - IN: c7all_cssand_test_ciRepo
+     - IN: c7service_ciRepo        
      - IN: c7-alltest
- - name: c7all_elasticsearch_test_runCI
-   type: runCI
-   steps:
-     - IN: c7all_elasticsearch_test_ciRepo  
-     - IN: c7-alltest
- - name: c7all_memcached_test_runCI
-   type: runCI
-   steps:
-     - IN: c7all_memcached_test_ciRepo 
-     - IN: c7-alltest
- - name: c7all_riak_test_runCI
-   type: runCI
-   steps:
-     - IN: c7all_riak_test_ciRepo 
-     - IN: c7-alltest
+
      
  - name: c7pytall_test2_runCI
    type: runCI
    steps:
      - IN: c7pytall_test2_ciRepo 
-     - IN: c7all_cuchdb_test_runCI   
-     - IN: c7all_cssand_test_runCI
-     - IN: c7all_elasticsearch_test_runCI
-     - IN: c7all_memcached_test_runCI
-     - IN: c7all_riak_test_runCI     
-     
+     - IN: c7service_runCI
