@@ -65,7 +65,6 @@ jobs:
            - rpm -qi python-devel 
            - pip show pyopenssl          
            
-
  - name: c7-alltest     
    type: runSh
    steps:
@@ -76,13 +75,12 @@ jobs:
              imageName: "drydock/c7all"
              imageTag: master
          script:      
-  - name: c7service_runCI
+ - name: c7service_runCI
    type: runCI
    steps:
      - IN: c7service_ciRepo        
      - IN: c7-alltest
 
-     
  - name: c7pytall_test2_runCI
    type: runCI
    steps:
