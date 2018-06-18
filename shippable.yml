@@ -1,5 +1,5 @@
 jobs:
- - name: c7
+ - name: c7_base
    type: runSh
    steps:
      - TASK:
@@ -67,7 +67,7 @@ jobs:
  - name: c7-alltest     
    type: runSh
    steps:
-     - IN: c7
+     - IN: c7_base
      - TASK:
          runtime:
            options:
