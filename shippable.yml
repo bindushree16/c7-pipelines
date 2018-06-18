@@ -1,5 +1,5 @@
 jobs:
- - name: c7-pipelines
+ - name: c7
    type: runSh
    steps:
      - TASK:
@@ -30,7 +30,6 @@ jobs:
            - java -version
            - node -v
            - rvm list
-           - python -V
            - pip show boto
            - pip show boto3
            - pip show apache-libcloud
@@ -68,7 +67,7 @@ jobs:
  - name: c7-alltest     
    type: runSh
    steps:
-     - IN: c7-pipelines
+     - IN: c7
      - TASK:
          runtime:
            options:
