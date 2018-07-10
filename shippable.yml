@@ -62,7 +62,8 @@ jobs:
            - openstack --version
            - pip3.6 --version
            - rpm -qi python-devel 
-           - pip show pyopenssl          
+           - pip show pyopenssl 
+           - yarn --version
            
  - name: c7-alltest     
    type: runSh
