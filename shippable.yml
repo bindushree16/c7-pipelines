@@ -64,6 +64,7 @@ jobs:
            - rpm -qi python-devel 
            - pip show pyopenssl 
            - yarn --version
+           - npm --version
            
  - name: c7-alltest     
    type: runSh
