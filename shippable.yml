@@ -75,7 +75,8 @@ jobs:
            options:
              imageName: "drydock/c7all"
              imageTag: master
-         script:      
+         script:
+           - echo "i am bindu"
  - name: c7service_runCI
    type: runCI
    steps:
