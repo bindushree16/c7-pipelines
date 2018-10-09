@@ -27,7 +27,7 @@ jobs:
            - aws --version
            - az --version
            - jfrog --version
-           - java -version
+           - java --version
            - node -v
            - rvm list
            - pip show boto
