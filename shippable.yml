@@ -65,7 +65,8 @@ jobs:
            - pip show pyopenssl 
            - yarn --version
            - npm --version
-           
+           - shippable_jdk set openjdk11
+           - shippable_jdk set oraclejdk11
  - name: c7-alltest     
    type: runSh
    steps:
