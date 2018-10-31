@@ -58,6 +58,7 @@ jobs:
            - rpm -qi python36u-libs
            - pip --version
            - pip show virtualenv
+           - pip show Shade
            - python3.6 --version
            - openstack --version
            - pip3.6 --version
