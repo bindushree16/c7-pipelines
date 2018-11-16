@@ -114,3 +114,15 @@ jobs:
    steps:
      - IN: c7_gol_test_ciRepo    
      - IN: c7service_runCI
+     
+ - name: c7_scaall_test_runCI
+   type: runCI
+   steps:
+     - IN: c7_scaall_test_ciRepo    
+     - IN: c7service_runCI
+     
+ - name: c7_cloall_test_runCI
+   type: runCI
+   steps:
+     - IN: c7_cloall_test_ciRepo  
+     - IN: c7service_runCI
