@@ -126,3 +126,9 @@ jobs:
    steps:
      - IN: c7_cloall_test_ciRepo  
      - IN: c7service_runCI
+     
+ - name: c7_php_test_runCI
+   type: runCI
+   steps:
+     - IN: c7_php_test_ciRepo 
+     - IN: c7service_runCI
